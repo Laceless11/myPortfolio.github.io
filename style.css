@@ -25,10 +25,10 @@ body::before {
 }
 
 .navbar {
-    position: fixed; /* Fixes the navbar at the top */
-    top: 0;          /* Aligns it at the top */
-    left: 0;         /* Aligns it to the left edge */
-    right: 0;        /* Aligns it to the right edge */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@ body::before {
     gap: 10%;
     background-color: #252525;
     height: 80px;
-    z-index: 1000;   /* Ensures it stays on top of other content */
+    z-index: 1000;
 }
 
 .navbar a {
@@ -62,7 +62,7 @@ body::before {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 60px; /* Space for fixed navbar */
+    padding-top: 65px;
 }
 
 .title {
