@@ -1,80 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
-body{
+body {
     background-color: #252525;
     color: rgb(244, 244, 244);
     font-family: 'Montserrat', sans-serif;
-    font-size: large;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: auto;
 }
 
-.navbar{
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('myself.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0;          /* Aligns it at the top */
+    left: 0;         /* Aligns it to the left edge */
+    right: 0;        /* Aligns it to the right edge */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50%;
-    margin-top: 2%;
     font-weight: bold;
+    flex-wrap: wrap;
+    gap: 10%;
+    background-color: #252525;
+    height: 60px;
+    z-index: 1000;   /* Ensures it stays on top of other content */
 }
 
-.contact{
-    margin: 0;
-    margin-left: 12.5%;
+.navbar a {
     text-decoration: none;
     color: white;
+    font-size: 150%;
 }
 
-.contact :hover{
-    color:rgb(0, 85, 255);
+.navbar a:hover {
+    background-color: rgb(0, 85, 255);
+    border-radius: 50px;
+    padding: 10px;
+    transition-duration: 0.4s;
 }
 
-.aboutMe{
-    margin: 0;
-    margin-left: 12.5%;
-    text-decoration: none;
-    color: white;
+.navbar a:active {
+    color: rgb(0, 85, 255);
 }
 
-.aboutMe :hover{
-    color:rgb(0, 85, 255);
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* Space for fixed navbar */
 }
 
-.skills{
-    margin-left: 12.5%;
-    text-decoration: none;
-    color: white;
+.title {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: #252525;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
-.skills :hover{
-    color:rgb(0, 85, 255)
-}
-
-.hireMe{
-    margin-left: 12.5%;
-    text-decoration: none;
-    color: white;
-}
-
-.hireMe :hover{
-    color:rgb(0, 85, 255);
-}
-
-.title{
-    width: 46%;
-    height: 50%;
-    /* background-color: blue; */
+.title::before {
+    content: '';
     position: absolute;
-    margin:  4%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 
-.name{
-    font-size: 250%;
+.title {
+    position: relative;
+    padding: 4% 20px;
+}
+
+.name {
+    font-size: 2em;
     font-weight: bold;
 }
 
 .subtitle {
     font-weight: bold;
-    font-size: 450%;
+    font-size: 4em;
     background: linear-gradient(to right, rgb(0, 85, 255), rgb(255, 255, 255));
     background-clip: text;
     -webkit-background-clip: text;
@@ -82,56 +108,152 @@ body{
     color: transparent;
 }
 
-.undertitle{
-    font-size: 150%;
+.undertitle {
+    font-size: 1.5em;
 }
 
-.title_picure{
-    width: 46%;
-    height: 50%;
-    /* background-color: pink; */
-    position: absolute;
-    margin-left: 50%;
-    margin-top: 4%;
+.container_sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 90%;
 }
 
-
-.social-icons a {
-    margin-right: 10px; /* Add some space between the icons */
-    display: inline-block; /* Ensures the icons are placed next to each other */
+.section {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 15px 2px;
-  border-radius: 50%;
+.section:nth-of-type(2) {
+    background-color: #444;
 }
 
-.fa:hover {
-    background-color: rgb(0, 85, 255);
-    color: #252525;
-    border: solid 2px #252525;
-    transition-duration: 0.2s;     
+.section:nth-of-type(3) {
+    background-color: #555;
 }
 
-.fa-linkedin {
-    border: solid 2px rgb(0, 85, 255);
-    background: #252525;
+.section_title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: rgb(0, 85, 255);
+    text-align: center;
 }
 
-.fa-instagram {
-    border: solid 2px rgb(0, 85, 255);
-    background: #252525;
-    color: rgb(0, 85, 255);
+.section_text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.fa-facebook {
-    border: solid 2px rgb(0, 85, 255);
-    background: #252525;
-    color: rgb(0, 85, 255);
+.section_img img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .container_sections {
+        flex-direction: column;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section:nth-of-type(odd) .section_content {
+        order: 1;
+        width: 50%;
+    }
+
+    .section:nth-of-type(odd) .section_img {
+        order: 2;
+        width: 50%;
+    }
+
+    .section:nth-of-type(even) .section_content {
+        order: 2;
+        width: 50%;
+    }
+
+    .section:nth-of-type(even) .section_img {
+        order: 1;
+        width: 50%;
+    }
+
+    .section_content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section_content, .section_img {
+        width: 100%;
+    }
+
+    .section_content {
+        padding: 10px;
+    }
+
+    .section_title {
+        font-size: 1.5em;
+    }
+
+    .section_text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        padding: 0 10px;
+    }
+
+    .name {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 1.8em;
+    }
+
+    .undertitle {
+        font-size: 1em;
+    }
+
+    .section_title {
+        font-size: 1.2em;
+    }
+
+    .section_text {
+        font-size: 0.9em;
+    }
+
+    .fa {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
+
+footer {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #252525;
 }

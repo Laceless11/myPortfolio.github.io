@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#start_section" class="contact">Start</a>    
+        <a href="#aboutMe_section" class="aboutMe">About me</a>
+        <a href="#skills_sektion" class="skills">Skills</a>
+        <a href="#contact_sektion" class="hireMe">Contact</a>
+    </header>
+    <div class="title-container" id="start_section">
+        <div class="title">
+            <div class="name">Hi, I'm Lennart Edler</div>
+            <div class="subtitle">IoT and Web Developer</div>
+            <div class="undertitle">I solve complex problems with creative approaches so they are no longer defined as problems</div>
+        </div>
+    </div>
+    <div class="container_sections" id="aboutMe_section">
+        <div class="section about_me">
+            <div class="section_content">
+                <p class="section_title">About ME</p>
+                <p class="section_text">Hallo, ich bin Lennart, 18 Jahre alt und ein leidenschaftlicher Softwareentwickler mit einer Vorliebe für Websites und IoT-Projekte. Meine Motivation ist es, Probleme zu lösen und meiner Kreativität freien Lauf zu lassen. In meiner Freizeit spiele ich Fußball und programmiere, was meine Kreativität und Perspektive fördert </div>
+            <div class="section_img">
+                <!-- Add image here if needed -->
+            </div>
+        </div>
+        <div class="section skills_box" id="skills_sektion">
+            <div class="section_img">
+                <!-- Add image here if needed -->
+            </div>
+            <div class="section_content">
+                <p class="section_title">Skills</p>
+                <p class="section_text">Ich arbeite derzeit im Bereich IoT und Webentwicklung. Durch die Interaktion mit erfahrenen Fachleuten auf IT-Veranstaltungen habe ich wertvolle Erfahrungen gesammelt. Meine Stärke liegt darin, komplexe Probleme in kleinere Schritte zu zerlegen und sie effizient zu lösen, um innovative Lösungen zu finden.          </div>
+        </div>
+        <div class="section contactMe" id="contact_sektion">
+            <div class="section_content">
+                <p class="section_title">Contact ME</p>
+                <div class="section_text">
+                    Ich freue mich, von Ihnen zu hören! Bei Fragen oder Anfragen können Sie mich gerne über Email unter Lennart.edler@gmx.de erreichen. Lassen Sie uns gemeinsam an Ihrem nächsten Projekt arbeiten!!!
+                </div>
+            </div>
+            <div class="section_img">
+                <!-- Add image here if needed -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        2024 &#169; <a href="mailto:lennart.edler@gmx.de">Lennart.edler@gmx.de</a>
+    </footer>
+</body>
+</html>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-color: #252525;
+    color: rgb(244, 244, 244);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: auto;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('myself.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0;          /* Aligns it at the top */
+    left: 0;         /* Aligns it to the left edge */
+    right: 0;        /* Aligns it to the right edge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-wrap: wrap;
+    gap: 10%;
+    background-color: #252525;
+    height: 60px;
+    z-index: 1000;   /* Ensures it stays on top of other content */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+}
+
+.navbar a:hover {
+    background-color: rgb(0, 85, 255);
+    border-radius: 50px;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+
+.navbar a:active {
+    color: rgb(0, 85, 255);
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* Space for fixed navbar */
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    color: #252525;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.title {
+    position: relative;
+    padding: 4% 20px;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 4em;
+    background: linear-gradient(to right, rgb(0, 85, 255), rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.undertitle {
+    font-size: 1.5em;
+}
+
+.container_sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.section {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.section:nth-of-type(2) {
+    background-color: #444;
+}
+
+.section:nth-of-type(3) {
+    background-color: #555;
+}
+
+.section_title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(0, 85, 255);
+    text-align: center;
+}
+
+.section_text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.section_img img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .container_sections {
+        flex-direction: column;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section:nth-of-type(odd) .section_content {
+        order: 1;
+        width: 50%;
+    }
+
+    .section:nth-of-type(odd) .section_img {
+        order: 2;
+        width: 50%;
+    }
+
+    .section:nth-of-type(even) .section_content {
+        order: 2;
+        width: 50%;
+    }
+
+    .section:nth-of-type(even) .section_img {
+        order: 1;
+        width: 50%;
+    }
+
+    .section_content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section_content, .section_img {
+        width: 100%;
+    }
+
+    .section_content {
+        padding: 10px;
+    }
+
+    .section_title {
+        font-size: 1.5em;
+    }
+
+    .section_text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        padding: 0 10px;
+    }
+
+    .name {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 1.8em;
+    }
+
+    .undertitle {
+        font-size: 1em;
+    }
+
+    .section_title {
+        font-size: 1.2em;
+    }
+
+    .section_text {
+        font-size: 0.9em;
+    }
+
+    .fa {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
+
+footer {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #252525;
+}
