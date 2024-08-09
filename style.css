@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+body{
+    background-color: #252525;
+    color: rgb(244, 244, 244);
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+.aboutMe{
+    margin: 0;
+    margin-left: 12.5%;
+}
+
+.skills{
+    margin-left: 12.5%;
+}
+
+.hireMe{
+    margin-left: 12.5%;
+}
+
+.title{
+    width: 46%;
+    height: 50%;
+    background-color: blue;
+    position: absolute;
+    margin:  4%;
+}
+
+.name{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 450%;
+    background: linear-gradient(to right, rgb(0, 85, 255), rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.undertitle{
+    font-size: 150%;
+}
+
+.title_picure{
+    width: 46%;
+    height: 50%;
+    background-color: pink;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 4%;
+}
